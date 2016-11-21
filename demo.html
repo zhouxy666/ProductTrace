@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript">
+    $.ajax({
+        url:'http://localhost:8080/FoodTracing/state01',
+        type:'post',
+        dataType:'jsonp',
+        success:function(msg){
+            console.log(msg);
+        },
+        error:function(){
+            alert('error');
+        }
+    })
+</script>
+</body>
+</html>
