@@ -417,23 +417,30 @@
                                     </table>
                                 </div>
                                 <div class="processes" style="display:none;">
-                                    <table id="proceList"
-                                           data-toggle="table"
-                                           data-mobile-responsive="true"
-                                           data-height="260"
-                                           data-pagination="true"
-                                           data-icon-size="outline"
-                                           data-search="false"
-                                           data-url="data/dataProductProce.json">
-                                        <thead>
-                                        <tr>
-                                            <th data-field="proceListName" >生产流程</th>
-                                            <th data-field="proceListDetail">流程描述</th>
-                                            <th data-field="proceListOperator">操作人员</th>
-                                            <th data-field="proceListData">操作时间</th>
-                                        </tr>
-                                        </thead>
-                                    </table>
+                                    <div class="ibox">
+                                        <table id="proceList"
+                                               data-toggle="table"
+                                               data-mobile-responsive="true"
+                                               data-height="260"
+                                               data-pagination="true"
+                                               data-icon-size="outline"
+                                               data-search="false"
+                                               data-url="data/dataProductProce.json">
+                                            <thead>
+                                            <tr>
+                                                <th data-field="proceListName" >生产流程</th>
+                                                <th data-field="proceListDetail">流程描述</th>
+                                                <th data-field="proceListOperator">操作人员</th>
+                                                <th data-field="proceListData">操作时间</th>
+                                            </tr>
+                                            </thead>
+                                        </table>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <button type="button" class="btn  btn-white pull-right">返回</button >
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -753,8 +760,8 @@
         $(".batchModule").on('click','a',function(){
             $(this).parents('.batchModule').fadeOut().siblings().fadeIn();
         });
-        $(".processes a").on('click',function(){
-            $(this).parent('div').fadeOut().siblings().fadeIn();
+        $(".processes button").on('click',function(){
+            $(this).parents('.processes').fadeOut().siblings().fadeIn();
         });
         //质检环节
         $(".qualityTest button").on('click',function(){
