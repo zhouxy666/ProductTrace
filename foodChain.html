@@ -10,17 +10,20 @@
     <style type="text/css">
         *{margin:0px;padding:0px;}
         ul li{list-style: none;}
+        .ibox-title span{font-weight:600;margin-left:5px;font-size:14px;}
         .nav-logo{height:50px;line-height:50px;float:left;margin-left:10px;cursor: pointer;}
         .nav-group{float:left;margin-right:10px;padding:0 20px;height:50px;}
         .nav-group ul li{display:inline-block;}
-        .nav-group ul li a{display:inline-block;line-height: 50px;padding:0 20px;font-size:14px;color:#666;}
+        .nav-group ul li a{display:inline-block;line-height: 50px;padding:0 20px;font-size:14px;color:#666;font-weight: bold;}
         .nav-group ul li :hover{background:#1AB394;color:#fff;}
         .nav-user{float:right;margin-right:20px;}
         .nav-user ul li{float:left;height:50px;line-height:50px;}
         .nav-user ul li a{display:block;color:#666;}
         .nav-user ul li span{padding:0 10px;}
         .nav-user ul li a:hover{color:#1AB394;}
-
+        .gotop{width:50px;height:50px;text-align:center;line-height:50px;border-radius: 4px;position:fixed;right:20px;bottom:60px;background:#ccc;cursor: pointer;color:#1AB394;transition: all .3s ease}
+        .gotop span{font-size:18px;font-weight:bold;}
+        .gotop:hover{background:#1AB394;color:#fff;}
         .client-list{cursor: pointer;}
         .entModule{border:1px solid #ddd;box-shadow: 0 0 4px #ccc;}
     </style>
@@ -30,7 +33,7 @@
     <link href="css/animate.min.css" rel="stylesheet">
     <link href="css/font-awesome.min93e3.css" rel="stylesheet">
     <link rel="stylesheet" href="css/jquery.fancybox.css"/>
-
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_rocwc9lx0fpyzaor.css">
 </head>
 <body>
 <div class="gray-bg top-navigation">
@@ -48,10 +51,6 @@
                             <li>
                                 <a>企业列表</a>
                             </li>
-                            <li>
-                                <a>批次抽检</a>
-                            </li>
-
                             <li>
                                 <a>四环一链</a>
                             </li>
@@ -157,7 +156,12 @@
                     <div class="row">
                         <div class="ibox">
                             <div class="ibox-title">
-                                <h5>原料供应环节</h5>
+                               <i class="iconfont icon-report-down"></i><span>原料供应环节</span>
+                                <div class="ibox-tools">
+                                    <a class="collapse-link">
+                                        <i class="fa fa-chevron-up"></i>
+                                    </a>
+                                </div>
                             </div>
                             <div class="ibox-content">
                                 <div class="tabs-container">
@@ -206,7 +210,7 @@
                                                 </div>
                                                 <div class="rawMatEntInfos" style="display:none;">
                                                     <div class="row">
-                                                        <div class="col-md-5">
+                                                        <div class="col-md-3 ">
                                                             <div class="rawMatEntInfo">
                                                                 <div class="panel panel-primary">
                                                                     <div class="panel-heading">
@@ -218,42 +222,33 @@
                                                                         <h4>生产日期</h4><p>test01</p>
                                                                         <h4>检测数量</h4><p>test01</p>
                                                                         <h4>生产日期</h4><p>test01</p>
-                                                                        <h4>批次溯源二维码展示</h4>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-7">
+                                                        <div class="col-md-6">
                                                             <div class="qualityImgInfo">
                                                                 <div class="panel panel-primary">
                                                                     <div class="panel-heading">
                                                                         <i class="fa fa-info-circle"></i>供应商证件
                                                                     </div>
                                                                     <div class="panel-body">
-                                                                        <a class="fancybox" href="img/p1.jpg" title="图片1">
-                                                                            <img alt="image" src="img/p_big1.jpg" />
-                                                                        </a>
-                                                                        <a class="fancybox" href="img/p1.jpg" title="图片1">
-                                                                            <img alt="image" src="img/p_big1.jpg" />
-                                                                        </a>
-                                                                        <a class="fancybox" href="img/p1.jpg" title="图片1">
-                                                                            <img alt="image" src="img/p_big1.jpg" />
-                                                                        </a>
-                                                                        <a class="fancybox" href="img/p1.jpg" title="图片1">
-                                                                            <img alt="image" src="img/p_big1.jpg" />
-                                                                        </a>
-                                                                        <a class="fancybox" href="img/p1.jpg" title="图片1">
-                                                                            <img alt="image" src="img/p_big1.jpg" />
-                                                                        </a>
-                                                                        <a class="fancybox" href="img/p1.jpg" title="图片1">
-                                                                            <img alt="image" src="img/p_big1.jpg" />
-                                                                        </a>
-                                                                        <a class="fancybox" href="img/p1.jpg" title="图片1">
-                                                                            <img alt="image" src="img/p_big1.jpg" />
-                                                                        </a>
-                                                                        <a class="fancybox" href="img/p1.jpg" title="图片1">
-                                                                            <img alt="image" src="img/p_big1.jpg" />
-                                                                        </a>
+                                                                        <div class="carousel slide" id="carousel1">
+                                                                            <div class="carousel-inner">
+                                                                                <div class="item active">
+                                                                                    <img class="img-responsive" src="img/lm01.jpg">
+                                                                                </div>
+                                                                                <div class="item ">
+                                                                                    <img class="img-responsive" src="img/lm02.jpg">
+                                                                                </div>
+                                                                            </div>
+                                                                            <a data-slide="prev" href="#carousel1" class="left carousel-control">
+                                                                                <span class="icon-prev"></span>
+                                                                            </a>
+                                                                            <a data-slide="next" href="#carousel1" class="right carousel-control">
+                                                                                <span class="icon-next"></span>
+                                                                            </a>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -285,10 +280,13 @@
                                                     <table id="rawMatList"
                                                            data-toggle="table"
                                                            data-mobile-responsive="true"
-                                                           data-height="260"
-                                                           data-pagination="true"
-                                                           data-icon-size="outline"
+                                                           data-query-params="queryParams"
                                                            data-search="false"
+                                                           data-pagination="true"
+                                                           data-pageNumber="1"
+                                                           data-pageSize="3"
+                                                           data-pageList="[10,25,50,100]"
+                                                           data-sidePagination="server"
                                                            data-url="data/rawMatList.json">
                                                         <thead>
                                                         <tr>
@@ -326,37 +324,14 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-7">
+                                                        <div class="col-md-6">
                                                             <div class="qualityImgInfo">
                                                                 <div class="panel panel-primary">
                                                                     <div class="panel-heading">
                                                                         <i class="fa fa-info-circle"></i>供应商证件
                                                                     </div>
                                                                     <div class="panel-body">
-                                                                        <a class="fancybox" href="img/p1.jpg" title="图片1">
-                                                                            <img alt="image" src="img/p_big1.jpg" />
-                                                                        </a>
-                                                                        <a class="fancybox" href="img/p1.jpg" title="图片1">
-                                                                            <img alt="image" src="img/p_big1.jpg" />
-                                                                        </a>
-                                                                        <a class="fancybox" href="img/p1.jpg" title="图片1">
-                                                                            <img alt="image" src="img/p_big1.jpg" />
-                                                                        </a>
-                                                                        <a class="fancybox" href="img/p1.jpg" title="图片1">
-                                                                            <img alt="image" src="img/p_big1.jpg" />
-                                                                        </a>
-                                                                        <a class="fancybox" href="img/p1.jpg" title="图片1">
-                                                                            <img alt="image" src="img/p_big1.jpg" />
-                                                                        </a>
-                                                                        <a class="fancybox" href="img/p1.jpg" title="图片1">
-                                                                            <img alt="image" src="img/p_big1.jpg" />
-                                                                        </a>
-                                                                        <a class="fancybox" href="img/p1.jpg" title="图片1">
-                                                                            <img alt="image" src="img/p_big1.jpg" />
-                                                                        </a>
-                                                                        <a class="fancybox" href="img/p1.jpg" title="图片1">
-                                                                            <img alt="image" src="img/p_big1.jpg" />
-                                                                        </a>
+                                                                        <img alt="image" class="" src="img/zm1123.png" />
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -378,7 +353,12 @@
                     <div class="row">
                         <div class="ibox">
                             <div class="ibox-title">
-                                <h5>产品生产环节</h5>
+                                <i class="iconfont icon-anquanshengchan"></i><span>产品生产环节</span>
+                                <div class="ibox-tools">
+                                    <a class="collapse-link">
+                                        <i class="fa fa-chevron-up"></i>
+                                    </a>
+                                </div>
                             </div>
                             <div class="ibox-content">
                                 <div class="batchModule" style="display:block;">
@@ -448,7 +428,12 @@
                     <div class="row">
                         <div class="ibox">
                             <div class="ibox-title">
-                                <h5>产品质检环节</h5>
+                                <i class="iconfont icon-zhijian"></i><span>产品质检环节</span>
+                                <div class="ibox-tools">
+                                    <a class="collapse-link">
+                                        <i class="fa fa-chevron-up"></i>
+                                    </a>
+                                </div>
                             </div>
                             <div class="ibox-content">
                                 <div class="tabs-container">
@@ -509,12 +494,21 @@
                                                                         <i class="fa fa-info-circle">自检基本信息</i>
                                                                     </div>
                                                                     <div class="panel-body">
-                                                                        <h4>批次名称</h4><p>test01</p>
-                                                                        <h4>产品名称</h4><p>test01</p>
-                                                                        <h4>生产日期</h4><p>test01</p>
-                                                                        <h4>检测数量</h4><p>test01</p>
-                                                                        <h4>生产日期</h4><p>test01</p>
-                                                                        <h4>批次溯源二维码展示</h4>
+                                                                        <div class="row">
+                                                                            <div class="col-md-4">
+                                                                                <h4>批次名称</h4><p>test01</p>
+                                                                                <h4>产品名称</h4><p>test01</p>
+                                                                                <h4>生产日期</h4><p>test01</p>
+                                                                                <h4>检测数量</h4><p>test01</p>
+                                                                                <h4>生产日期</h4><p>test01</p>
+                                                                            </div>
+                                                                            <div class="col-md-6">
+                                                                                <h3 style="text-align:center;font-weight: bold;">产品批次二维码展示</h3>
+                                                                                <p style="text-align:center;">
+                                                                                    <img src="img/hj.png" width="200" height="200">
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -526,30 +520,24 @@
                                                                         <i class="fa fa-info-circle"></i>自检报告单
                                                                     </div>
                                                                     <div class="panel-body">
-                                                                        <a class="fancybox" href="img/p1.jpg" title="图片1">
-                                                                            <img alt="image" src="img/p_big1.jpg" />
-                                                                        </a>
-                                                                        <a class="fancybox" href="img/p1.jpg" title="图片1">
-                                                                            <img alt="image" src="img/p_big1.jpg" />
-                                                                        </a>
-                                                                        <a class="fancybox" href="img/p1.jpg" title="图片1">
-                                                                            <img alt="image" src="img/p_big1.jpg" />
-                                                                        </a>
-                                                                        <a class="fancybox" href="img/p1.jpg" title="图片1">
-                                                                            <img alt="image" src="img/p_big1.jpg" />
-                                                                        </a>
-                                                                        <a class="fancybox" href="img/p1.jpg" title="图片1">
-                                                                            <img alt="image" src="img/p_big1.jpg" />
-                                                                        </a>
-                                                                        <a class="fancybox" href="img/p1.jpg" title="图片1">
-                                                                            <img alt="image" src="img/p_big1.jpg" />
-                                                                        </a>
-                                                                        <a class="fancybox" href="img/p1.jpg" title="图片1">
-                                                                            <img alt="image" src="img/p_big1.jpg" />
-                                                                        </a>
-                                                                        <a class="fancybox" href="img/p1.jpg" title="图片1">
-                                                                            <img alt="image" src="img/p_big1.jpg" />
-                                                                        </a>
+                                                                       <div class="carousel slide" id="carousel-quality">
+                                                                           <div class="carousel-inner">
+                                                                               <div class="item active">
+                                                                                   <img src="img/xy.JPG" class="img-responsive">
+                                                                               </div>
+                                                                               <div class="item">
+                                                                                   <img src="img/zmj.JPG" class="img-responsive">
+                                                                               </div>
+                                                                           </div>
+                                                                           <a class="left carousel-control" href="#carousel-quality" data-slide="prev">
+                                                                               <span class="glyphicon glyphicon-chevron-left"></span>
+                                                                               <span class="sr-only">Previous</span>
+                                                                           </a>
+                                                                           <a class="right carousel-control" href="#carousel-quality" data-slide="next">
+                                                                               <span class="glyphicon glyphicon-chevron-right"></span>
+                                                                               <span class="sr-only">Next</span>
+                                                                           </a>
+                                                                       </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -586,132 +574,107 @@
                     <div class="row">
                         <div class="ibox">
                             <div class="ibox-title">
-                                <h5>出厂销售环节</h5>
+                                <i class="iconfont icon-xiaoshouguanli"></i><span>出厂销售环节</span>
+                                <div class="ibox-tools">
+                                    <a class="collapse-link">
+                                        <i class="fa fa-chevron-up"></i>
+                                    </a>
+                                </div>
                             </div>
                             <div class="ibox-content">
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <div class="full-height-scroll">
-                                            <div class="table-responsive">
-                                                <table class="table table-striped table-hover">
-                                                    <tbody>
-                                                    <tr class="client-list">
-                                                        <td>
-                                                            <a class="client-link">稷山县利民粮油批发部</a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="client-list">
-                                                        <td>
-                                                            <a class="client-link">稷山县稷峰贺明副食品批发部</a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="client-list">
-                                                        <td>
-                                                            <a class="client-link">孔祥和</a>
-                                                        </td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
+                                <div class="dealerListMoudle" style="display:block;">
+                                    <div class="ibox">
+                                        <div class="form-inline">
+                                            <div class="form-group">
+                                                <strong>经销商列表</strong>
+                                            </div>
+                                            <div class="form-group pull-right" role="form">
+                                                <label for="dealerSearch"></label>
+                                                <input type="email" class="form-control" id="dealerSearch" placeholder="搜索经销商">
+                                                <button href="javascript:void(0)" class="btn btn-primary">搜索</button>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-5">
-                                        <div class="entModule">
-                                            <div class="ibox-content">
-                                                <div class="entInfo" style="display:block;">
-                                                    <div class="entInfoBase">
-                                                        <h3><strong>稷山县利民粮油批发部1</strong></h3>
-                                                        <p>
-                                                            <i class="fa fa-map-marker"></i> 稷山县稷峰西所
-                                                        </p>
-                                                        <address>
-                                                            联系人：王立民<br>
-                                                            电子邮箱:<br>
-                                                            联系电话：13903483212
-                                                        </address>
+                                    <table id="dealerList"
+                                           data-toggle="table"
+                                           data-mobile-responsive="true"
+                                           data-height="260"
+                                           data-pagination="true"
+                                           data-icon-size="outline"
+                                           data-search="false"
+                                           data-url="data/dealerList">
+                                        <thead>
+                                        <tr>
+                                            <th data-field="id" >ID</th>
+                                            <th data-field="dealerName">公司名称</th>
+                                            <th data-field="dealerAddress">公司地址</th>
+                                            <th data-field="dealerPerson">公司联系人</th>
+                                            <th data-field="dealerWeb">公司网址</th>
+                                            <th data-field="dealerTel">联系电话</th>
+                                            <th data-field="operate">操作</th>
+                                        </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                                <div class="dealerListInfos" style="display:none;">
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <div class="dealerBaseInfo">
+                                                <div class="panel panel-primary">
+                                                    <div class="panel-heading">
+                                                        <i class="fa fa-info-circle">经销商基本信息</i>
                                                     </div>
-                                                    <div class="carousel slide" id="carousel1">
-                                                        <div class="carousel-inner">
-                                                            <div class="item active">
-                                                                <img src="img/lm01.jpg" >
-                                                            </div>
-                                                            <div class="item">
-                                                                <img src="img/lm02.jpg" >
-                                                            </div>
-                                                        </div>
-                                                        <a data-slide="prev" href="carousel.html#carousel1" class="left carousel-control">
-                                                            <span class="icon-prev"></span>
-                                                        </a>
-                                                        <a data-slide="next" href="carousel.html#carousel1" class="right carousel-control">
-                                                            <span class="icon-next"></span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="entInfo" style="display:none;">
-                                                    <div class="entInfoBase">
-                                                        <h3><strong>稷山县利民粮油批发部2</strong></h3>
-                                                        <p>
-                                                            <i class="fa fa-map-marker"></i> 稷山县稷峰西所
-                                                        </p>
-                                                        <address>
-                                                            联系人：王立民<br>
-                                                            电子邮箱:<br>
-                                                            联系电话：13903483212
-                                                        </address>
-                                                    </div>
-                                                    <div class="carousel slide" id="carousel2">
-                                                        <div class="carousel-inner">
-                                                            <div class="item active">
-                                                                <img alt="image" class="" src="img/lm01.jpg" >
-                                                            </div>
-                                                            <div class="item">
-                                                                <img alt="image" class="" src="img/lm02.jpg" >
-                                                            </div>
-                                                        </div>
-                                                        <a data-slide="prev" href="carousel.html#carousel2" class="left carousel-control">
-                                                            <span class="icon-prev"></span>
-                                                        </a>
-                                                        <a data-slide="next" href="carousel.html#carousel2" class="right carousel-control">
-                                                            <span class="icon-next"></span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="entInfo" style="display:none;">
-                                                    <div class="entInfoBase">
-                                                        <h3><strong>稷山县利民粮油批发部3</strong></h3>
-                                                        <p>
-                                                            <i class="fa fa-map-marker"></i> 稷山县稷峰西所
-                                                        </p>
-                                                        <address>
-                                                            联系人：王立民<br>
-                                                            电子邮箱:<br>
-                                                            联系电话：13903483212
-                                                        </address>
-                                                    </div>
-                                                    <div class="carousel slide" id="carousel3">
-                                                        <div class="carousel-inner">
-                                                            <div class="item active">
-                                                                <img alt="image" class="" src="img/lm01.jpg" >
-                                                            </div>
-                                                            <div class="item">
-                                                                <img alt="image" class="" src="img/lm02.jpg" >
-                                                            </div>
-                                                        </div>
-                                                        <a data-slide="prev" href="carousel.html#carousel3" class="left carousel-control">
-                                                            <span class="icon-prev"></span>
-                                                        </a>
-                                                        <a data-slide="next" href="carousel.html#carousel3" class="right carousel-control">
-                                                            <span class="icon-next"></span>
-                                                        </a>
+                                                    <div class="panel-body">
+                                                        <h4>企业名称</h4><p>test01</p>
+                                                        <h4>企业地址</h4><p>test01</p>
+                                                        <h4>企业联系人</h4><p>test01</p>
+                                                        <h4>产品批次</h4><p>test01</p>
+                                                        <h4>购入数量</h4><p>test01</p>
+                                                        <h4>购入时间</h4><p>test01</p>
                                                     </div>
                                                 </div>
                                             </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="dealerImgInfo">
+                                                <div class="panel panel-primary">
+                                                    <div class="panel-heading">
+                                                        <i class="fa fa-info-circle"></i>经销商证件
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <div class="carousel slide" id="caroDealer">
+                                                            <div class="carousel-inner">
+                                                                <div class="item active">
+                                                                    <img class="img-responsive" src="img/lm01.jpg">
+                                                                </div>
+                                                                <div class="item ">
+                                                                    <img class="img-responsive" src="img/lm02.jpg">
+                                                                </div>
+                                                            </div>
+                                                            <a data-slide="prev" href="#caroDealer" class="left carousel-control">
+                                                                <span class="icon-prev"></span>
+                                                            </a>
+                                                            <a data-slide="next" href="#caroDealer" class="right carousel-control">
+                                                                <span class="icon-next"></span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-11">
+                                            <button type="button" class="btn  btn-white pull-right">返回</button >
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="gotop" style="display:none;">
+                    <span class="iconfont icon-top1"></span>
                 </div>
             </div>
         </div>
@@ -724,12 +687,19 @@
 <script src="js/bootstrap-table.min.js"></script>
 <script src="js/bootstrap-table-zh-CN.min.js"></script>
 <script src="js/jquery.fancybox.js"></script>
+<script src="js/content.min.js"></script>
 <script type="text/javascript">
     jQuery(document).ready(function() {
         var $entInfos = $('.entInfo');
         var $clientLists = $('.client-list');
+        var $rawMatList = $('.rawMatList');
+        var $gotop = $('.gotop');
         $('.dd').nestable();
         $(".fancybox").fancybox({openEffect:"none",closeEffect:"none"});
+        //分页
+        $rawMatList.bootstrapTable({
+
+        });
         $clientLists.on({
             'click':function(){
                 var index = $(this).index();
@@ -741,6 +711,17 @@
                     $entInfos.eq(index).fadeIn().siblings().fadeOut();
                 }
             }
+        });
+        //gotop
+        $(document).scroll(function(){
+            if($(this).scrollTop()>200){
+                $gotop.show();
+            }else{
+                $gotop.hide();
+            }
+        });
+        $gotop.on('click',function(){
+            $('html, body').animate({scrollTop:'0px'},500);
         });
         //原料供应商
         $(".rawMatEntModule").on('click','a',function(){
@@ -767,7 +748,13 @@
         $(".qualityTest button").on('click',function(){
             $(this).parents('.qualityTest').fadeOut().siblings().fadeIn();
         });
-
+        //经销商环节
+        $(".dealerListMoudle").on('click','a',function(){
+            $(this).parents('.dealerListMoudle').fadeOut().siblings().fadeIn();
+        });
+        $(".dealerListInfos button").on('click',function(){
+            $(this).parents('.dealerListInfos').fadeOut().siblings().fadeIn();
+        });
     });
 </script>
 </body>
